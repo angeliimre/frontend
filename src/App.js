@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import {Routes,Route,Link,BrowserRouter} from "react-router-dom";
 import Login from './components/login';
 import Profile from './components/profile';
+import Group from './components/group';
+import Conversation from './components/conversation'
 import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 
@@ -35,6 +37,8 @@ function App() {
       <Route index element={<Register user={user} getUser={getUser}/>}/>
       <Route path="/login" element={<Login user={user} getUser={getUser}/>}/>
       <Route path="/profile" element={<Profile user={user} getUser={getUser}/>}/>
+      <Route path="/group" element={<Group user={user} getUser={getUser}/>}/>
+      <Route path="/conversation/:user_id" element={<Conversation user={user} getUser={getUser}/>}/>
     </Routes>
   </BrowserRouter>
 }
