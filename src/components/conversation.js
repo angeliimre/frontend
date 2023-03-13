@@ -119,7 +119,7 @@ export default function Conversation({user,getUser}){
       <div style={{display:"block"}}><div style={{paddingRight:"20px",display:"flex",justifyContent:"flex-end"}}><span style={{background:"red",fontSize:"large"}}>{name}</span></div></div>
     </div>
     <div className="card-body m-0 row p-0" style={{height:"90%"}}>
-      <div className="col-4 border" style={{height:"100%"}}>
+      <div className="col-4 border" style={{overflow:"scroll",height:"100%"}}>
         {groups.length&&groups.map(function(item,index){
             return <div className="row hoverable-row" onClick={function(){
               clearInterval(terminal);
