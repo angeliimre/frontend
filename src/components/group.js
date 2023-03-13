@@ -47,7 +47,7 @@ export default function Group({user,getUser}){
       }).then(
         res=>res.json()
       ).then(
-        res=>navigate(`/conversation/${res}`)
+        res=>navigate(`/conversation`)
       )
       //console.log(group_details);
     }
