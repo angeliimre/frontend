@@ -39,6 +39,8 @@ function App() {
       <Route path="/profile" element={<Profile user={user} getUser={getUser}/>}/>
       <Route path="/group" element={<Group user={user} getUser={getUser}/>}/>
       <Route path="/conversation/:user_id" element={<Conversation user={user} getUser={getUser}/>}/>
+      <Route path="/conversation/:group_id" element={<Conversation user={user} getUser={getUser}/>}/>
+      <Route path="/conversation" element={<Conversation user={user} getUser={getUser}/>}/>
     </Routes>
   </BrowserRouter>
 }

@@ -9,6 +9,7 @@ export default function Group({user,getUser}){
    
     const [users,setUsers]=useState([]);
     const [group_data,setGroup]=useState({});
+    const navigate=useNavigate()
     useEffect(()=>{
       
         getUser()
@@ -46,7 +47,7 @@ export default function Group({user,getUser}){
       }).then(
         res=>res.json()
       ).then(
-        res=>console.log(res)
+        res=>navigate(`/conversation/${res}`)
       )
       //console.log(group_details);
     }

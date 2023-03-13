@@ -43,10 +43,12 @@ export default function Profile({user,getUser}){
         }).then(
           res=>res.json()
         ).then(
-          res=>console.log(res)
+          res=>{
+            navigate(`/conversation/${partner_id}`)
+          }
         )
         
-        //navigate('/conversation')
+        
     }
 
     return user?<div className="row ">
@@ -60,7 +62,7 @@ export default function Profile({user,getUser}){
                 <div className="profile-image-container" style={{width:"60px"}}>
                     <img className="rounded-circle" src={nouser} width="50px" height="50px"/>
                 </div>
-                <div className="col col-autocalc py-2">{item.name}
+                <div className="col col-autocalc py-2">{item.id},{item.name}
                 </div>
             </div>
         })

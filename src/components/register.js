@@ -37,7 +37,7 @@ export default function Register({user,getUser}){
                 setResponse(res)
                 if(res.status==="success"){
                     Cookies.set("token",res.token)
-                    navigate("/profile")
+                    navigate("/conversation")
                 }
             }
         )
